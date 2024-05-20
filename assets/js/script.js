@@ -1,27 +1,27 @@
 // Declaración de constantes
 // SVG Logo
-const planeta = document.getElementById("planeta");
+const $planeta = $("#planeta");
 
 // Quienes Somos Cards (h5)
-const qshPlane = document.getElementById("qsh-plane");
-const qshMountain = document.getElementById("qsh-mountain");
-const qshRoute = document.getElementById("qsh-route");
+const $qshPlane = $("#qsh-plane");
+const $qshMountain = $("#qsh-mountain");
+const $qshRoute = $("#qsh-route");
 
 // Quienes Somos Cards (p)
-const qspPlane = document.getElementById("qsp-plane");
-const qspMountain = document.getElementById("qsp-mountain");
-const qspRoute = document.getElementById("qsp-route");
+const $qspPlane = $("#qsp-plane");
+const $qspMountain = $("#qsp-mountain");
+const $qspRoute = $("#qsp-route");
 
 var jetLag = false;
 
 // El avión rotará al hacer clic
-planeta.addEventListener("click", function() {
-    planeta.classList.toggle('que-vuele'); 
+$planeta.on("click", function() {
+    $planeta.toggleClass('que-vuele'); 
 });
 
 // Cambia algo de su P
 // Alerta de Jetlag
-qshPlane.addEventListener("click", function() {
+$qshPlane.on("click", function() {
     jetLag = !jetLag;
     console.log(jetLag);
     if (jetLag === true) {
@@ -32,11 +32,11 @@ qshPlane.addEventListener("click", function() {
 });
 
 // Oculta o muestra P de Quienes Somos Card 2
-qshMountain.addEventListener("click", function() {
-    qspMountain.classList.toggle('d-none'); 
+$qshMountain.on("click", function() {
+    $qspMountain.toggleClass('d-none'); 
 });
 
 // Hace girar el P de Quienes Somos Card 3
-qshRoute.addEventListener("click", function() {
-    qspRoute.classList.toggle('que-vuele'); 
+$qshRoute.on("click", function() {
+    $qspRoute.toggleClass('que-vuele'); 
 });
